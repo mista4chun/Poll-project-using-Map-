@@ -21,6 +21,10 @@ function submitForm(e) {
   poll.set(selectedOption.value, voteCount + 1);
 
   displayResults();
+//   disable form fields after submit
+document.getElementById('poll-form')
+        .querySelectorAll('input, button')
+        .forEach((el) => el.setAttribute('disabled', true))
 }
 
 function displayResults() {
